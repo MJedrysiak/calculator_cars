@@ -1,0 +1,330 @@
+body {
+  background-image: url(background.png);
+}
+
+span {
+  color: lavender;
+}
+
+label {
+  color: lavender;
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-justify: center;
+  color: aliceblue;
+  background-color: #0a4275;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 1%;
+  border-radius: 5%;
+  border-style: groove;
+  border-color: silver;
+  margin-top: 1%;
+}
+
+h1 {
+  font-size: 2em;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+span,
+label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  background-color: #0a4275;
+  border-color: lavender;
+  border-radius: 5%;
+  box-shadow: 0px 0px 7px aliceblue;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.carGrid {
+  display: grid;
+  grid-template-columns: 50px auto auto 50px;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1.2rem;
+}
+
+.carGrid .marginLeft {
+  grid-column: 1;
+  grid-row: 1/9;
+}
+.carGrid .marginRight {
+  grid-column: 4;
+  grid-row: 1/9;
+}
+
+.labelCar {
+  grid-column: 2;
+}
+
+.inputCar input,
+.inputCarName input {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.inputCar label {
+  width: 10%;
+}
+
+input {
+  text-align: right;
+  height: 22px;
+}
+
+#inputCar1 {
+  width: 100%;
+}
+
+.checkBox {
+  margin: auto;
+}
+
+.labelCar {
+  text-align: left;
+}
+
+//* Eksploatacja *//
+
+.exploatation {
+  display: grid;
+}
+
+.explWrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(7, auto);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1.2rem;
+  justify-content: center;
+}
+
+#explCount {
+  border-width: medium;
+  margin-left: 74%;
+}
+
+.exploatation .buttonWrapper {
+  grid-column: 2/4;
+}
+
+.spans {
+  margin: auto;
+}
+
+input {
+  background-color: aliceblue;
+}
+.inputs {
+  display: flex;
+  flex-direction: inline;
+  align-items: center;
+}
+
+.inputs input {
+}
+
+.inputs label {
+  text-align: center;
+}
+
+*//
+//* Ubezpieczenia *//
+
+.insurance {
+  display: flex;
+  justify-content: center;
+}
+
+.insWrapper {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 50px auto auto 50px;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  border-style: groove;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1.2rem;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.buttonWrapper {
+  grid-row: 6;
+  grid-column: 3;
+}
+
+.buttonWrapperAmo {
+  grid-column: 2 / span 3;
+  margin: auto;
+}
+
+#buttonAm {
+  border-width: medium;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  border-color: lavender;
+  background-color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+  border-style: none;
+  color: darkblue;
+}
+
+#insCount {
+  border-width: medium;
+}
+
+.insWrapper .marginLeft {
+  grid-column: 1;
+  grid-row: 1/6;
+}
+.insWrapper .marginRight {
+  grid-column: 4;
+  grid-row: 1/6;
+}
+
+.labelIns {
+  grid-column: 2;
+}
+
+.inputIns {
+  width: 100%;
+}
+
+.inputIns input {
+  width: 80%;
+}
+
+.calcWrapper {
+  display: grid;
+  border-radius: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1.2rem;
+  width: 90%;
+  margin-left: 5%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  grid-template-areas:
+    ". kupAm nkupAm ."
+    ". kupExpl nkupExpl ."
+    ". kupIns nkupIns ."
+    ". result nkupResult .";
+}
+
+#kupAm {
+  grid-area: kupAm;
+}
+
+#nkupAm {
+  grid-area: nkupAm;
+}
+
+#kupExpl {
+  grid-area: kupExpl;
+}
+
+#nkupExpl {
+  grid-area: nkupExpl;
+}
+#kupIns {
+  grid-area: kupIns;
+}
+
+#nkupIns {
+  grid-area: nkupIns;
+}
+
+#kupGeneral {
+  grid-area: result;
+}
+
+#nkupGeneral {
+  grid-area: nkupResult;
+}
+
+.costs {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext {
+  font-size: 1.1rem;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#nkupFinal {
+  background-color: crimson;
+}
+
+#kupFinal {
+  background-color: darkseagreen;
+}

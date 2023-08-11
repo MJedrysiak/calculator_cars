@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="pl">
+    <head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/tomorrow" type="text/css"/>
+     <link rel="stylesheet" href="css/styles.css">
+    <title>Kalkulator - koszty uzyskania przychodów dla samochodów osobowych</title>
+   
+    </head>
+
+    
+    <body>
+        
+   
+        
+        <section class="title"> <h1> Kalkulator - koszty uzyskania przychodu dla samochodów osobowych </h1>
+           
+        </section>
+        <hr>
+        
+        <section class="car">
+        
+            <div class="carGrid grid">
+                   <div class ="h2Car"><h2>Informacje o samochodzie</h2> </div>
+                <div class="marginLeft">
+                </div>
+                <div class="labelCar label1">
+                    <span> Marka samochodu: </span> 
+                </div>
+                    <div class="inputCarName">
+                        <input type="text"> </input>
+                    </div>
+                <div class="labelCar inputCar2">
+                    <span> Wartość początkowa samochodu: </span> 
+                </div>
+                <div class="inputCar inputCar2">
+                            <label><input type="number" id="inivalue"> zł </label>
+                </div>                             
+                <div class="labelCar">
+                    <span> Amortyzacja w bieżącym roku podatkowym: </span> 
+                 </div>
+                 <div class="inputCar">
+                        <label><input type="number" id="amo"> zł </label>
+                </div>                     
+                <div class="labelCar label6">
+                    <span> Samochód elektryczny: </span> 
+                </div>
+                    <div class="checkBox">
+                        <label><input type="radio" id="electricYes" type="radio" class="radioInput" value="y" name="electric"> Tak </label>
+                        <label><input type="radio" name="electric"  class="radioInput" id="electricNo" value="n"> Nie </label>
+                    </div>
+                <div class="labelCar label7">
+                    <span> Dla samochodu prowadzona jest kilometrówka </span> 
+                </div>
+                    <div class="checkBox">
+                        <label><input type="radio" id="kmYes" name="km" value="y"> Tak </label>
+                        <label><input type="radio" id="kmNo" name="km" value="n"> Nie </label>
+                    </div>
+                 <div class="labelCar tooltip" >
+                    <span> Samochód ciężarowy, autobus, samochód, którego konstrukcja wskazuje, <br> że może być wykorzystywany jedynie do celow działalności gospodarczej  </span> 
+                       <span class="tooltiptext">Samchody wielozadaniowe, VANy, samochody z otwartą częścią przeznaczoną do przewozu ładunków, ciężarówki, samochody specjalne: agregaty elektryczne/spawalnicze, pojazdy do prac wiertniczych, koparki, koparko-spycharki, ładowarki, podnośniki do prac konserwacyjno-montażowych, żurawie samochodowe – jeżeli z dokumentów wydanych zgodnie z przepisami o ruchu drogowym
+wynika, że dany pojazd jest pojazdem specjalnym.</span>
+                </div>
+                    <div class="checkBox">
+                        <label><input id="tirYes" type="radio" value="y" name="tir"> Tak </label>
+                        <label><input id="tirNo" type="radio" value="n" name="tir"> Nie </label>
+                    </div>
+              <div class="labelCar label9">
+                    <span> Jestem czynnym podatnikiem VAT  </span> <!---dodać def samocodu ciężarowego-->
+                </div>
+                    <div class="checkBox">
+                        <label><input id="vatYes" type="radio"  name="vat" value="y"> Tak </label>
+                        <label><input id="vatNo" type="radio" name="vat" value="n"> Nie </label>
+                    </div>
+                <div class="marginRight">
+                </div>
+                <div class="buttonWrapperAmo">
+                    <button class="countButton" id="buttonAm">Oblicz</button>
+                    </div> 
+            
+            
+            
+                
+            </section>
+
+            <section class="exploatation"> 
+              
+            <div class="explWrapper grid">
+                 <div class="h2expl"> <h2>Wydatki eksploatacyjne w roku podatkowym </h2>  </div>                
+                    <div id="paliwo" class="spans">
+                        <span> Paliwo: </span>    
+                    </div>
+                   <div id="paliwoInput" class="inputs">
+                        <label>  <input type="number" id="paliwoNet"> <br /> zł netto </label>
+                        <label>  <input type="number" id="paliwoVat"> <br />zł vat </label>
+                        <label>  <input type="number" id="paliwoGross"> <br />zł brutto </label>
+                  </div>  
+                    <div id="naprawy"  class="spans">   
+                    <span> Naprawy: </span>    
+                    </div>
+                    <div id="naprawyInput" class="inputs">
+                        <label>  <input type="number" id="naprawyNet"><br /> zł netto </label>
+                        <label>  <input type="number" id="naprawyVat"><br /> zł vat </label>
+                        <label>  <input type="number" id="naprawyGross"><br /> zł brutto </label>
+                    </div>
+                    <div id="zamienne"  class="spans">
+                        <span> Części zamienne: </span>    
+                    </div>
+                    <div id="zamienneInput" class="inputs">
+                        <label>  <input type="number" id="zamienneNet"><br /> zł netto </label>
+                        <label>  <input type="number" id="zamienneVat"> <br />zł vat </label>
+                        <label>  <input type="number" id="zamienneGross"> <br />zł brutto </label>
+                    </div>
+                    <div id="oleje"  class="spans">
+                        <span> Olej, płyny:  </span>    
+                    </div>
+                    <div id="olejeInput" class="inputs">
+                        <label>  <input type="number" id="olejeNet"><br /> zł netto </label>
+                        <label>  <input type="number" id="olejeVat"> <br />zł vat </label>
+                        <label>  <input type="number" id="olejeGross"> <br />zł brutto </label>
+                    </div>
+                       <div id="parking"  class="spans" >               
+                        <span> Parkingi: </span>    
+                    </div>
+                    <div id="parkingInput" class="inputs">
+                        <label>  <input type="number" id="parkingNet"> <br />zł netto </label>
+                        <label>  <input type="number" id="parkingVat"><br /> zł vat </label>
+                        <label>  <input type="number" id="parkingGross"> <br />zł brutto </label>
+                    </div>  
+                    <div id="autostrady"  class="spans">   
+                    <span> Autostrady: </span>    
+                    </div>
+                    <div id="austostradyInput" class="inputs">
+                        <label>  <input type="number" id="autostradaNet"> <br />zł netto </label>
+                        <label>  <input type="number" id="autostradaVat"> <br />zł vat </label>
+                        <label>  <input type="number" id="autostradaGross"><br /> zł brutto </label>
+                    </div>  
+                     <div class="buttonWrapper">
+                    <button class="countButton" id="explCount">Oblicz</button>
+                    </div>                  
+                                  
+                    </div>  
+            </section>
+
+           
+             <section class="insurance">  
+                
+                <div class="insWrapper grid"> 
+                 
+                    <h2> Koszty ubezpieczeń: </h2>           
+                <div class= "marginLeft"> 
+                </div>
+                <div class="labelIns oc">
+                    <span> OC: </span> 
+                </div>
+                <div class="inputIns">
+                    <label><input type="number" id="ocInput"> zł </label>
+                </div>
+                <div class="labelIns ac">
+                    <span> AC: </span> 
+                </div>
+                <div class="inputIns acInput">
+                    <label><input type="number" id="acInput"> zł </label>
+                </div> 
+                 <div class="labelIns">
+                    <span> NNW: </span> 
+                </div>
+                <div class="inputIns">
+                    <label><input type="number" id="nnwInput"> zł </label>
+                </div>
+                <div class="labelIns">
+                    <span> Assistance: </span> 
+                </div>
+                <div class="inputIns">
+                    <label><input type="number" id="asInput"> zł </label> 
+                </div>
+                <div class="labelIns">
+                    <span> Inne: </span> 
+                </div>
+                <div class="inputIns">
+                    <label><input type="number" id="otherInput"> zł </label>
+                </div>  
+                <div class="buttonWrapper">
+                    <button class="countButton" id="insCount">Oblicz</button>
+                    </div>
+                <div class="marginRight">
+                </div>
+                </div>   
+            
+            </section>
+
+            <section> 
+              
+                <div class="calcWrapper grid">
+                     <div class = "h2Calc"><h2> Kalkulacja: </h2> </div> 
+                    <div class="costs" id="kupAm">
+                        <span> Amortyzacja podatkowa - koszty uzyskania przychodow: </span>
+                        <label><input type="number" id="amkup"> zł </label>                        
+                    </div>
+                     <div class="costs" id="nkupAm">
+                        <span> Amortyzacja podatkowa - poza kosztami uzyskania przychodow: </span>
+                        <label><input type="number" id="amnkup"> zł </label>                        
+                    </div>
+                     <div class="costs" id="kupExpl">
+                        <span> Wydatki eksploatacyjne: koszty uzyskania przychodów: </span>
+                        <label><input type="number" id="explkup"> zł </label>                        
+                    </div>
+                     <div class="costs" id="nkupExpl">
+                        <span> Wydatki eksploatacyjne: poza kosztami uzyskania przychodów: </span>
+                        <label><input type="number" id="explnkup"> zł </label>                        
+                    </div>
+                     <div class="costs" id="kupIns">
+                        <span> Ubezpieczenia: koszty uzyskania przychodów: </span>
+                        <label><input type="number" id="inskup"> zł </label>                        
+                    </div>
+                     <div class="costs" id="nkupIns">
+                        <span> Ubezpieczenia: poza kosztami uzyskania przychodów: </span>
+                        <label><input type="number" id="insnkup"> zł </label>                        
+                    </div>
+                    <div class="costs" id="kupGeneral">
+                        <span> Koszty uzyskania przychodów ogółem: </span>
+                        <label><input type="number" id="kupFinal"> zł </label>                        
+                    </div>
+                     <div class="costs" id="nkupGeneral">
+                        <span> Poza kosztami uzyskania przychodów ogółem: </span>
+                        <label><input type="number" id="nkupFinal"> zł </label>                        
+                    </div>
+                
+                
+                </div>
+        
+        
+        
+            
+        
+            </section>
+            <script src="jsdom.js"> </script>    
+             <script src="js.js"> </script>
+           
+            
+    </body>
+
+   
+</html>
